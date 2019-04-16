@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>invoer 2</title>
+</head>
+<body>
+<h1>Invoer</h1>
+<p><input type="text" id="naam" placeholder="vul hier je naam in"> </p>
+<p><input type="text" id="leeftijd" placeholder="vul hier je leeftijd in"></p>
+<button onclick="losop()"> ok </button>
+<script>
+    function losop () {
+        var naam = document.getElementById("naam").value;
+        var leeftijd = document.getElementById("leeftijd").value;
+
+        document.write("<p> je naam is " + naam + "</p>");
+        document.write("<p> je bent " + leeftijd + "jaar oud </p>");
+
+    }
+</script>
+</body>
+</html>

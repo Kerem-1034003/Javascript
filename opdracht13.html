@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>totaalprijs</title>
+</head>
+<body>
+<h1>totaalprijs</h1>
+<p><input type="text" id="invaantal" placeholder="aantal"> </p>
+<p><input type="text" id="invprijs" placeholder="prijs"> </p>
+
+<p id="uitvoeraantal"> </p>
+<p id="uitvoerprijs"> </p>
+<p id="uitvoertotaal"></p>
+
+<button onclick="bereken()">ok</button>
+
+<script>
+function bereken() {
+    var aantal= document.getElementById("invaantal").value;
+    var prijs= document.getElementById("invprijs").value;
+    var totaalprijs= aantal * prijs;
+
+    document.getElementById("uitvoeraantal").innerHTML =
+        "aantal is " + aantal;
+    document.getElementById("uitvoerprijs").innerHTML =
+        "prijs is " + prijs;
+    document.getElementById("uitvoertotaal").innerHTML =
+        "totale prijs is " + totaalprijs;
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>

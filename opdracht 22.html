@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>schildersbedrijf</title>
+</head>
+<body>
+<h1>schildersbedrijf</h1>
+<p> <input type="text" id="invlengte" placeholder="lengte"> </p>
+<p> <input type="text" id="invbreedte" placeholder="breedte"> </p>
+<p> <input type="text" id="invsoort" placeholder="soort"> </p>
+
+
+<p id="uitvoerlengte"></p>
+<p id="uitvoerbreedte"></p>
+<p id="uitvoersoort"></p>
+<p id="uitvoeroppervlakte"></p>
+<p id="uitvoerprijs"></p>
+<p id="uitvoerprijs2"></p>
+
+<button onclick="bereken()">oke</button>
+
+<script>
+    function bereken() {
+
+        var lengte = document.getElementById("invlengte").value;
+        var breedte = document.getElementById("invbreedte").value;
+        var soort = document.getElementById("invsoort").value;
+        var oppervlakte = lengte * breedte;
+
+        document.getElementById("uitvoerlengte").innerHTML =
+            "lengte is " + lengte;
+        document.getElementById("uitvoerbreedte").innerHTML =
+            "breedte is " + breedte;
+        document.getElementById("uitvoeroppervlakte").innerHTML =
+            "oppervlakte is " + oppervlakte;
+        document.getElementById("uitvoersoort").innerHTML =
+            "het soort oppevlakte is " + soort;
+
+        if (soort=="muur") {
+            document.getElementById("uitvoerprijs2").innerHTML =
+                "prijs per m2 is 25";
+            document.getElementById("uitvoerprijs").innerHTML =
+                "totaalprijs is " + 25 * oppervlakte;
+        }
+        else if (soort=="plafond") {
+            document.getElementById("uitvoerprijs2").innerHTML =
+                "prijs per m2 is 40";
+            document.getElementById("uitvoerprijs").innerHTML =
+                "totaalprijs is " + 40 * oppervlakte;
+        }
+        else if (soort=="vloer") {
+            document.getElementById("uitvoerprijs2").innerHTML =
+                "prijs per m2 is 30";
+            document.getElementById("uitvoerprijs").innerHTML =
+                "totaalprijs is " + 30 * oppervlakte;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dobbelsteen</title>
+</head>
+<body>
+<h1>dobbelsteen4</h1>
+<p id="uitvoer">Je hebt nog niks gegooid</p>
+<p> <button onclick="bereken()">klik</button> </p>
+<img id="uitvoerimg" src="" alt="" width="100px" height="100px">
+<script>
+    function bereken() {
+        var worp = Math.floor(Math.random() * 6 + 1);
+        switch (worp) {
+            case 1:
+                document.getElementById("uitvoer").innerHTML =
+                  "je gooit: 1";
+                document.getElementById("uitvoerimg").src ="dob1.png";
+                break;
+            case 2:
+                document.getElementById("uitvoer").innerHTML =
+                    "je gooit: 2";
+                document.getElementById("uitvoerimg").src ="dobb2.PNG";
+                break;
+            case 3:
+                document.getElementById("uitvoer").innerHTML =
+                    "je gooit: 3";
+                document.getElementById("uitvoerimg").src ="dob3.PNG";
+                break;
+            case 4:
+                document.getElementById("uitvoer").innerHTML =
+                    "je gooit: 4";
+                document.getElementById("uitvoerimg").src ="dobb4.png";
+                break;
+            case 5:
+                document.getElementById("uitvoer").innerHTML =
+                    "je gooit: 5";
+                document.getElementById("uitvoerimg").src ="dob5.jpg";
+                break;
+            case 6:
+                document.getElementById("uitvoer").innerHTML =
+                    "je gooit: 6";
+                document.getElementById("uitvoerimg").src ="dob6.jpg";
+                break;
+            default:
+        }
+    }
+</script>
+
+</body>
+</html>

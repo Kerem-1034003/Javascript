@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectie3</title>
+</head>
+<body>
+<h1>selectie3</h1>
+<p><input type="text" id="invaantal" placeholder="aantal"> </p>
+<button onclick="bereken()">oke</button>
+<p id="uitvoer"></p>
+
+<script>
+    function bereken() {
+        var aantal= document.getElementById("invaantal").value;
+
+        if(aantal<100){
+            document.getElementById("uitvoer").innerHTML=
+                "je krijgt helaas geen korting"
+        }
+        else{
+            document.getElementById("uitvoer").innerHTML=
+                "je krijgt 10% korting"
+        }
+
+
+    }
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

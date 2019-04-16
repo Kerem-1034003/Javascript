@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>driedubbelselectie</title>
+</head>
+<body>
+<h1>driedubbelselectie</h1>
+<p><input type="text" id="leeftijd" placeholder="leeftijd"></p>
+<button onclick="bereken()">oke</button>
+<p id="uitvoer"></p>
+
+<script>
+    function bereken() {
+        var leeftijd= document.getElementById("leeftijd").value;
+
+        if(leeftijd <5){
+            document.getElementById("uitvoer").innerHTML=
+                "kinderopvang"
+        }
+        else if(leeftijd <13){
+            document.getElementById("uitvoer").innerHTML=
+                "lagere school"
+        }
+        else if(leeftijd <17){
+            document.getElementById("uitvoer").innerHTML=
+                "middelbareschool"
+        }
+        else
+        {document.getElementById("uitvoer").innerHTML=
+            "vervolgopleiding"
+        }
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

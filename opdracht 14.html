@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toaalprijsincbtw</title>
+</head>
+<body>
+<h1> totaalprijs</h1>
+<p> <input type="text" id="invaantal" placeholder="aantal"></p>
+<p><input type="text" id="invprijs" placeholder="prijs"> </p>
+
+<p id="uitvoeraantal"></p>
+<p id="uitvoerprijs"></p>
+<p id="uitvoerbtw"></p>
+<P id="uitvoerbtwtotaal"></P>
+<button onclick="bereken()"> oke </button>
+
+<script>
+    function bereken() {
+
+        var aantal = document.getElementById("invaantal").value;
+        var prijs = document.getElementById("invprijs").value;
+        var totaalprijs= aantal*prijs;
+        var btwtotaal = totaalprijs * 1.21;
+        var btwbedrag = btwtotaal - totaalprijs;
+
+
+        document.getElementById("uitvoeraantal").innerHTML =
+            "aantal is " + aantal;
+        document.getElementById("uitvoerprijs").innerHTML =
+            "prijs is " + prijs;
+        document.getElementById("uitvoerbtw").innerHTML =
+            "btw bedrag is " + btwbedrag;
+        document.getElementById("uitvoerbtwtotaal").innerHTML =
+            "totaal bedrag is" + btwtotaal;
+
+    }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
